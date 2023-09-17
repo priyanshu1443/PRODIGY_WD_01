@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive landing page</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/cbc573eb6f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="flex">
+    <div id="img_div" class="flex">
+      <i id="open_nav" class="fa-solid fa-bars fa-2xl"></i>
+      <i id="close_nav" class="fa-solid fa-xmark fa-2xl"></i>
+      <img src="./img/brand_logo.png" alt="">
+    </div>
+    <ul id="nav_list">
+      <li class="li"><a href="#">Menu</a></li>
+      <li class="li"><a href="#">Location</a></li>
+      <li class="li"><a href="#">About</a></li>
+      <li class="li"><a href="#">Contact</a></li>
+    </ul>
+    <div><button>Login</button></div>
+  </nav>
+  <main class="container flex">
+    <div id="product_div">
+      <img src="./img/shoe_image.png" alt="">
+    </div>
+    <div id="content" class="flex">
+      <h1>YOUR FEET DESERVE THE BEST</h1>
+      <p>YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR SHOES.YOUR FEET DESERVE THE BEST AND WE’RE
+        HERE
+        TO HELP
+        YOU WITH OUR SHOES.</p>
+      <div id="buttons" class="flex">
+        <button>Shop Now</button>
+        <button>Category</button>
+      </div>
+      <div id="promotion" class="flex">
+        <span>Also Available On</span>
+        <div id="company_logo" class="flex">
+          <img src="./img/amazon.png" alt="">
+          <img src="./img/flipkart.png" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    const open_nav = document.getElementById("open_nav")
+    const close_nav = document.getElementById("close_nav")
+    const nav_list = document.getElementById("nav_list")
+
+    open_nav.addEventListener('click', () => {
+      open_nav.style.display = "none"
+      close_nav.style.display = "block"
+      nav_list.style.left = "0px"
+    })
+    close_nav.addEventListener('click', () => {
+      close_nav.style.display = "none"
+      open_nav.style.display = "block"
+      nav_list.style.left = "-90px"
+    })
+  </script>
+</body>
+
+</html>

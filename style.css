@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  font-size: 1.6rem
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.li {
+  list-style: none;
+}
+
+
+/* navigation section start */
+
+nav {
+  height: 72px;
+  justify-content: space-around;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+#img_div {
+  justify-content: center;
+  gap: 20px;
+}
+
+#open_nav,
+#close_nav {
+  display: none;
+}
+
+nav img {
+  height: 42.75px;
+  width: 76px;
+}
+
+#nav_list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav li {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #2E2E2E;
+  transition: all .5s ease-in;
+}
+
+nav li a:hover {
+  color: #D01C28;
+}
+
+nav button {
+  background-color: #D01C28;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  border: none;
+  outline: none;
+  margin-block: 20px;
+  transition: all .5s ease-in;
+}
+
+nav button:hover {
+  color: #2E2E2E;
+  background-color: white;
+  border: 1px solid #747272;
+}
+
+/* navigation section end  */
+
+/* main section start  */
+
+main {
+  margin: auto;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#product_div img {
+  width: 53rem;
+}
+
+#content {
+  flex-direction: column;
+  align-items: start;
+  width: 40%;
+  gap: 3.2rem;
+}
+
+#content h1 {
+  font-size: 9rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  line-height: 10.2rem;
+  width: 50rem;
+}
+
+#content p {
+  width: 40.4rem;
+  color: #5A5959;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#buttons {
+  gap: 4rem;
+}
+
+#buttons button {
+  font-size: 2.4rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+#buttons button:nth-child(1) {
+  background-color: #D01C28;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 6px 16px;
+  transition: all .5s ease-in;
+}
+
+#buttons button:nth-child(1):hover {
+  background-color: white;
+  border: 1px solid #838282;
+  color: #5A5959;
+}
+
+#buttons button:nth-child(2) {
+  background-color: white;
+  color: #5A5959;
+  outline: none;
+  border: 1px solid #838282;
+  padding: 6px 16px;
+  transition: all .5s ease-in;
+}
+
+#buttons button:nth-child(2):hover {
+  background-color: #D01C28;
+  border-color: transparent;
+  color: white;
+}
+
+#promotion {
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+#promotion span {
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #5A5959;
+}
+
+#company_logo {
+  width: 80px;
+  gap: 16px;
+  align-items: flex-start;
+
+}
+
+/* main section end  */
+
+/* media quary  */
+
+@media(max-width:1200px) {
+  html {
+    font-size: 56.75%;
+  }
+}
+
+@media(max-width:1025px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media(max-width:768px) {
+  html {
+    font-size: 43.75%;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #product_div img {
+    width: 40rem;
+  }
+
+  #content {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #content h1 {
+    width: 80vw;
+    text-align: center;
+    line-height: 7.5rem;
+    font-size: 7rem;
+  }
+
+  #content p {
+    width: 80vw;
+    text-align: center;
+  }
+
+  #buttons button {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width:481px) {
+  html {
+    font-size: 47.5%;
+  }
+
+  #open_nav,
+  #close_nav {
+    position: fixed;
+    top: 40px;
+    left: 10px;
+  }
+
+  #open_nav {
+    display: block;
+  }
+
+  #nav_list {
+    position: fixed;
+    top: 80px;
+    left: -90px;
+    flex-direction: column;
+    background-color: white;
+    padding-block: 20px;
+    padding-inline: 20px;
+    border-radius: 10px;
+    box-sizing: 1px 1px 2px 5px gray;
+    transition: all 1s ease;
+  }
+
+  #content h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
